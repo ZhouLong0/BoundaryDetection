@@ -1,0 +1,44 @@
+[
+    {
+        "initial_description": "Briefly describe the action/event that just started in the current video segment. Describe only on the main actions or events taking place. Descrive only what is in the current segment.",
+
+        "validity_check": "Given the previous event description: {previous_description}, is this the same event or a new one? Respond ONLY with 'SAME' if it's the same or 'NEW' if it's a new event.",
+
+        "update_description": "Briefly describe the action/event that just started in the current video segment. Describe only on the main actions or events taking place. Descrive only what is in the current segment."
+    },
+    {
+        "initial_description": "Briefly describe the new event that just started.",
+
+        "validity_check": "Given the previous event description: {previous_description}, is this the same event or a new one? Respond ONLY with 'YES' if it's the same or 'NO' if it's a different event.",
+
+        "update_description": "Briefly describe the new event that just started."
+    },
+    {
+        "initial_description": "Briefly describe the action/event that just started in the current video segment. Focus only on the main actions and the progress of the action, ignore meaningless detail to determine the current event. Be careful on their details. Describe ONLY what is happening in the video segment provided.",
+
+        "validity_check": "Your goal is to identify if the same action is ongoing in the current video segment compared to the previous one.\nGiven the previous event description:\n{previous_description}\nQuestion: Is the current video segment still the same stage of the same event?\nAs the last line answer ONLY with 'YES' or 'NO' with no extra characters.",
+
+        "update_description": "Briefly describe the action/event that just started in the current video segment. Focus only on the main actions and the progress of the action, ignore meaningless detail to determine the current event. Be careful on their details. Describe ONLY what is happening in the video segment provided."
+    },
+    {
+        "initial_description": "Briefly describe the action/event that just started in the current video segment. Focus ONLY on the main character and the main actions. Describe only what's in the video segment",
+
+        "validity_check": "Your goal is to identify if the same action is ongoing in the current video segment compared to the previous one.\n\nGiven the previous event description:\n{previous_description}\nQuestion: is this the same event or not?\nAs the last line answer ONLY with 'YES' or 'NO'.",
+
+        "update_description": "Briefly describe the action/event that just started in the current video segment. Focus ONLY on the main character and the main actions. Describe only what's in the video segment"
+    },
+    {
+        "initial_description": "Provide a concise description of the main action in the current video segment. Focus only on the movements.",
+
+        "validity_check": "Given the previous event description: {previous_description}, is this the same event? Respond ONLY with 'YES' or 'NO'.",
+
+        "update_description": "Provide a concise description of the main action in the current video segment. Focus only on the movements."
+    },
+    {
+        "initial_description": "Provide a concise description of the main action in the current video segment. Focus on the substeps of the action.",
+
+        "validity_check": "Given the previous event description: {previous_description}, is this the same event? Respond ONLY with 'YES' or 'NO'.",
+
+        "update_description": "Provide a concise description of the main action in the current video segment. Focus on the substeps of the action."
+    }
+]

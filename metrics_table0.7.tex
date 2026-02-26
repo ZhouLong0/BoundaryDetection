@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage[margin=0.5in, left=0.3in]{geometry}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\tiny
+\begin{tabular}{ccccccccccccc}
+\toprule
+\textbf{Prompt ID} & \textbf{Chunk Size (frames)} & \textbf{F1@0.05} & \textbf{F1@0.1} & \textbf{F1@0.15} & \textbf{F1@0.2} & \textbf{F1@0.25} & \textbf{F1@0.3} & \textbf{F1@0.35} & \textbf{F1@0.4} & \textbf{F1@0.45} & \textbf{F1@0.5} & \textbf{Average} \\
+\midrule
+1 & 4 & 0.189 & 0.270 & 0.323 & 0.361 & 0.394 & 0.431 & 0.442 & 0.480 & 0.491 & 0.491 & 0.387 \\
+1 & 8 & 0.189 & 0.277 & 0.333 & 0.377 & 0.396 & 0.428 & 0.459 & 0.465 & 0.478 & 0.491 & 0.389 \\
+1 & 12 & 0.162 & 0.242 & 0.316 & 0.343 & 0.370 & 0.397 & 0.424 & 0.444 & 0.451 & 0.458 & 0.361 \\
+1 & 16 & 0.129 & 0.245 & 0.320 & 0.367 & 0.388 & 0.401 & 0.442 & 0.456 & 0.476 & 0.476 & 0.370 \\
+2 & 4 & 0.200 & 0.330 & 0.400 & 0.425 & 0.450 & 0.475 & 0.480 & 0.490 & 0.495 & 0.500 & 0.424 \\
+2 & 8 & 0.248 & 0.336 & 0.403 & 0.434 & 0.481 & 0.506 & 0.512 & 0.527 & 0.532 & 0.537 & 0.452 \\
+2 & 12 & 0.179 & 0.295 & 0.370 & 0.376 & 0.410 & 0.445 & 0.457 & 0.468 & 0.474 & 0.474 & 0.395 \\
+2 & 16 & 0.167 & 0.256 & 0.308 & 0.359 & 0.404 & 0.429 & 0.449 & 0.468 & 0.481 & 0.487 & 0.381 \\
+3 & 4 & 0.202 & 0.271 & 0.330 & 0.351 & 0.376 & 0.393 & 0.410 & 0.424 & 0.431 & 0.431 & 0.362 \\
+3 & 8 & 0.247 & 0.340 & 0.369 & 0.394 & 0.428 & 0.453 & 0.465 & 0.474 & 0.495 & 0.499 & 0.416 \\
+3 & 12 & 0.219 & 0.330 & 0.409 & 0.451 & 0.479 & 0.507 & 0.544 & 0.553 & 0.567 & 0.572 & 0.463 \\
+3 & 16 & 0.247 & 0.375 & 0.434 & 0.461 & 0.483 & 0.504 & 0.531 & 0.552 & 0.568 & 0.584 & 0.474 \\
+\bottomrule
+\end{tabular}
+\caption{{\textbf{F1} metrics across different prompt configurations and chunk sizes}}
+\label{tab:f1}
+\end{table}
+
+\begin{table}[h]
+\centering
+\tiny
+\begin{tabular}{ccccccccccccc}
+\toprule
+\textbf{Prompt ID} & \textbf{Chunk Size (frames)} & \textbf{Precision@0.05} & \textbf{Precision@0.1} & \textbf{Precision@0.15} & \textbf{Precision@0.2} & \textbf{Precision@0.25} & \textbf{Precision@0.3} & \textbf{Precision@0.35} & \textbf{Precision@0.4} & \textbf{Precision@0.45} & \textbf{Precision@0.5} & \textbf{Average} \\
+\midrule
+1 & 4 & 0.208 & 0.298 & 0.357 & 0.399 & 0.435 & 0.476 & 0.488 & 0.530 & 0.542 & 0.542 & 0.427 \\
+1 & 8 & 0.261 & 0.383 & 0.461 & 0.522 & 0.548 & 0.591 & 0.635 & 0.643 & 0.661 & 0.678 & 0.538 \\
+1 & 12 & 0.255 & 0.383 & 0.500 & 0.543 & 0.585 & 0.628 & 0.670 & 0.702 & 0.713 & 0.723 & 0.570 \\
+1 & 16 & 0.209 & 0.396 & 0.516 & 0.593 & 0.626 & 0.648 & 0.714 & 0.736 & 0.769 & 0.769 & 0.598 \\
+2 & 4 & 0.203 & 0.335 & 0.406 & 0.431 & 0.457 & 0.482 & 0.487 & 0.497 & 0.503 & 0.508 & 0.431 \\
+2 & 8 & 0.261 & 0.353 & 0.424 & 0.457 & 0.505 & 0.533 & 0.538 & 0.554 & 0.560 & 0.565 & 0.475 \\
+2 & 12 & 0.217 & 0.357 & 0.448 & 0.455 & 0.497 & 0.538 & 0.552 & 0.566 & 0.573 & 0.573 & 0.478 \\
+2 & 16 & 0.239 & 0.367 & 0.440 & 0.514 & 0.578 & 0.615 & 0.642 & 0.670 & 0.688 & 0.697 & 0.545 \\
+3 & 4 & 0.156 & 0.210 & 0.255 & 0.272 & 0.290 & 0.304 & 0.317 & 0.328 & 0.333 & 0.333 & 0.280 \\
+3 & 8 & 0.215 & 0.296 & 0.321 & 0.343 & 0.372 & 0.394 & 0.405 & 0.412 & 0.431 & 0.434 & 0.362 \\
+3 & 12 & 0.207 & 0.313 & 0.388 & 0.427 & 0.454 & 0.480 & 0.515 & 0.524 & 0.537 & 0.542 & 0.439 \\
+3 & 16 & 0.271 & 0.412 & 0.476 & 0.506 & 0.529 & 0.553 & 0.582 & 0.606 & 0.624 & 0.641 & 0.520 \\
+\bottomrule
+\end{tabular}
+\caption{{\textbf{Precision} metrics across different prompt configurations and chunk sizes}}
+\label{tab:precision}
+\end{table}
+
+\begin{table}[h]
+\centering
+\tiny
+\begin{tabular}{ccccccccccccc}
+\toprule
+\textbf{Prompt ID} & \textbf{Chunk Size (frames)} & \textbf{Recall@0.05} & \textbf{Recall@0.1} & \textbf{Recall@0.15} & \textbf{Recall@0.2} & \textbf{Recall@0.25} & \textbf{Recall@0.3} & \textbf{Recall@0.35} & \textbf{Recall@0.4} & \textbf{Recall@0.45} & \textbf{Recall@0.5} & \textbf{Average} \\
+\midrule
+1 & 4 & 0.172 & 0.246 & 0.296 & 0.330 & 0.360 & 0.394 & 0.404 & 0.438 & 0.448 & 0.448 & 0.354 \\
+1 & 8 & 0.148 & 0.217 & 0.261 & 0.296 & 0.310 & 0.335 & 0.360 & 0.365 & 0.374 & 0.384 & 0.305 \\
+1 & 12 & 0.118 & 0.177 & 0.232 & 0.251 & 0.271 & 0.291 & 0.310 & 0.325 & 0.330 & 0.335 & 0.264 \\
+1 & 16 & 0.094 & 0.177 & 0.232 & 0.266 & 0.281 & 0.291 & 0.320 & 0.330 & 0.345 & 0.345 & 0.268 \\
+2 & 4 & 0.197 & 0.325 & 0.394 & 0.419 & 0.443 & 0.468 & 0.473 & 0.483 & 0.488 & 0.493 & 0.418 \\
+2 & 8 & 0.236 & 0.320 & 0.384 & 0.414 & 0.458 & 0.483 & 0.488 & 0.502 & 0.507 & 0.512 & 0.431 \\
+2 & 12 & 0.153 & 0.251 & 0.315 & 0.320 & 0.350 & 0.379 & 0.389 & 0.399 & 0.404 & 0.404 & 0.336 \\
+2 & 16 & 0.128 & 0.197 & 0.236 & 0.276 & 0.310 & 0.330 & 0.345 & 0.360 & 0.369 & 0.374 & 0.293 \\
+3 & 4 & 0.286 & 0.384 & 0.468 & 0.498 & 0.532 & 0.557 & 0.581 & 0.601 & 0.611 & 0.611 & 0.513 \\
+3 & 8 & 0.291 & 0.399 & 0.433 & 0.463 & 0.502 & 0.532 & 0.547 & 0.557 & 0.581 & 0.586 & 0.489 \\
+3 & 12 & 0.232 & 0.350 & 0.433 & 0.478 & 0.507 & 0.537 & 0.576 & 0.586 & 0.601 & 0.606 & 0.491 \\
+3 & 16 & 0.227 & 0.345 & 0.399 & 0.424 & 0.443 & 0.463 & 0.488 & 0.507 & 0.522 & 0.537 & 0.435 \\
+\bottomrule
+\end{tabular}
+\caption{{\textbf{Recall} metrics across different prompt configurations and chunk sizes}}
+\label{tab:recall}
+\end{table}
+
+\textbf{Note:} Evaluation is performed on a subset of 100 videos.
+
+
+\section*{Prompt Descriptions}
+
+\textbf{Prompt 1:}
+\begin{itemize}
+  \item \textit{Initial description:} Briefly describe the action/event that just started in the current video segment. Describe only on the main actions or events taking place. Descrive only what is in the current segment.
+  \item \textit{Validity check:} Given the previous event description: \{previous\_description\}, is this the same event or a new one? Respond ONLY with 'SAME' if it's the same or 'NEW' if it's a new event.
+  \item \textit{Update description:} Briefly describe the action/event that just started in the current video segment. Describe only on the main actions or events taking place. Descrive only what is in the current segment.
+\end{itemize}
+
+\textbf{Prompt 2:}
+\begin{itemize}
+  \item \textit{Initial description:} Briefly describe the new event that just started.
+  \item \textit{Validity check:} Given the previous event description: \{previous\_description\}, is this the same event or a new one? Respond ONLY with 'YES' if it's the same or 'NO' if it's a different event.
+  \item \textit{Update description:} Briefly describe the new event that just started.
+\end{itemize}
+
+\textbf{Prompt 3:}
+\begin{itemize}
+  \item \textit{Initial description:} Provide a concise description of the main action in the current video segment. Focus on the substeps of the action.
+  \item \textit{Validity check:} Given the previous event description: \{previous\_description\}, is this the same event? Respond ONLY with 'YES' or 'NO'.
+  \item \textit{Update description:} Provide a concise description of the main action in the current video segment. Focus on the substeps of the action.
+\end{itemize}
+
+\end{document}

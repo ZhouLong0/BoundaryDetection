@@ -1,0 +1,23 @@
+[
+    {
+        "initial_description": "Describe the single observable action or event in this 0.5 second video segment.",
+        "validity_check": "Given the previous event description: {previous_description}, is this the same event? Respond ONLY with 'YES' or 'NO'.",
+        "update_description": "Describe the single observable action or event in this 0.5 second video segment.",
+        "update_token": "NO",
+        "skip_token": "YES"
+    },
+    {
+        "initial_description": "Describe the single observable event that occurs in this video clip.",
+        "validity_check": "Given the previous event description: {previous_description}, is this the same event? Respond ONLY with 'YES' or 'NO'.",
+        "update_description": "Describe the single observable event that occurs in this video clip.",
+        "update_token": "NO",
+        "skip_token": "YES"
+    },
+    {
+        "initial_description": "Describe the state of the main event of the video in this 0.5 second video segment.",
+        "validity_check": "Does the video segment show exactly: {previous_description}? Respond ONLY with 'YES' or 'NO'.",
+        "update_description": "Describe the state of the main event of the video in this 0.5 second video segment.",
+        "update_token": "NO",
+        "skip_token": "YES"
+    }
+]

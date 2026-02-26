@@ -1,0 +1,21 @@
+OpenDataLab___TAPOS
+flow/
+data/Kinetics-GEBD
+data/TAPOS/images
+output
+mllms_know-main
+videoprism
+exp
+spike_rl
+exp_old
+data/
+results/
+CSN-pretrained
+other_methods
+*.zip
+models/protas
+models/mstcn
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
